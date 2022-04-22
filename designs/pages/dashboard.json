@@ -1,0 +1,1443 @@
+[
+    {
+        "id": "sd_BxGDqXg5nYTPE4ed",
+        "type": "tab",
+        "createdDate": "2022-03-23T10:08:16.215Z",
+        "label": "dashboard",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 1,
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_9yKA3DX36HvNUEQR",
+        "type": "OnInit",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "functionName": "sd_9yKA3DX36HvNUEQR",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_WQNXgV2AmBqeY0LE",
+                "sd_ibUeR6TpvuQDlRJE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_WQNXgV2AmBqeY0LE",
+        "type": "PageVariables",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "res",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "loggedUser",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "users",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "tableData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "editRes",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_WQNXgV2AmBqeY0LE",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_DON8UMkQCnGVeEFG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_RQCUNnpkGEIcfAN7",
+        "type": "OpenDialog",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_MWGSfjYsXgWfz4ee",
+            "label": "dialog"
+        },
+        "relativePath": "./dialog",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "\"500px\"",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page.res",
+        "functionName": "sd_RQCUNnpkGEIcfAN7",
+        "category": "Dialog",
+        "x": 225,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "sd_g9rDWyVx6I6HWGmK"
+            ],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "str",
+                "value": "500px",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "res",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_M0GM0QEeQq12P4pS",
+        "type": "PageStart",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openDialog",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openDialog",
+        "category": "General",
+        "x": 60,
+        "y": 340,
+        "wires": [
+            [
+                "sd_RQCUNnpkGEIcfAN7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_IloPwwpnL4FkrRss",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.res\nconsole.log(page.res, \"Hello Data\")\nlocalStorage.setItem(\"users\", JSON.stringify(page.res))\n//return JSON.parse(sessionStorage.getItem(\"user\"));",
+        "functionName": "sd_IloPwwpnL4FkrRss",
+        "category": "Function",
+        "x": 165,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_DON8UMkQCnGVeEFG",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "getUsers ",
+        "script": "page.loggedUser = JSON.parse(sessionStorage.getItem(\"user\"));\n// console.log(page.loggedUser,\"Back From Session Store\")\nif(page.loggedUser.email.includes('admin')){\n    return true\n}else{\n    return window.location.href =  '/home/employee'\n}",
+        "functionName": "getUsers",
+        "category": "Function",
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "sd_rnx3vVLUOzoif8gw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_DX21OE4czXLJYImh",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.users, 'Users from back end Two dashboard')\n\npage.tableData = page.users\n;\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\nconsole.log(page.tableData,\"o\")",
+        "functionName": "sd_DX21OE4czXLJYImh",
+        "category": "Function",
+        "x": 705,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_rnx3vVLUOzoif8gw",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_uhO3DaNW3vL9FDMI",
+            "flowName": "getRegUsers"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "users",
+                "mapVarName": "result",
+                "localVar": "this.page.users"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "getRegUsers",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_rnx3vVLUOzoif8gw",
+        "category": "General",
+        "x": 545,
+        "y": 40,
+        "wires": [
+            [
+                "sd_DX21OE4czXLJYImh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_xzgYsGu7JqIo2qvN",
+        "type": "PageStart",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "tableData",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "tableData",
+        "category": "General",
+        "x": 365,
+        "y": 180,
+        "wires": [
+            [
+                "sd_ibUeR6TpvuQDlRJE",
+                "sd_rnx3vVLUOzoif8gw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_ibUeR6TpvuQDlRJE",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "",
+        "functionName": "sd_ibUeR6TpvuQDlRJE",
+        "category": "Function",
+        "x": 265,
+        "y": 120,
+        "wires": [
+            [
+                "sd_rnx3vVLUOzoif8gw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_q6iZR82AbdbrGZX0",
+        "type": "PageStart",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "deleteUser",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "deleteUser",
+        "category": "General",
+        "x": 45,
+        "y": 240,
+        "wires": [
+            [
+                "sd_UtJ87pxje1VAFTug"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_1nscaOORocM3clrV",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_iROl80nDTtR2K3aD",
+            "flowName": "deleteUser"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "deleteUser",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_1nscaOORocM3clrV",
+        "category": "General",
+        "x": 265,
+        "y": 240,
+        "wires": [
+            [
+                "sd_SOFwlDSSvUvqNkd5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_UtJ87pxje1VAFTug",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.id, \"Hello there\")",
+        "functionName": "sd_UtJ87pxje1VAFTug",
+        "category": "Function",
+        "x": 145,
+        "y": 240,
+        "wires": [
+            [
+                "sd_1nscaOORocM3clrV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_aZh1lGZu5XzGT6nf",
+        "type": "PageStart",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "addUser",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "addUser",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addUser",
+        "category": "General",
+        "x": 58,
+        "y": 428.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_CFCuPoy03YrDUVli",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_5cfgXVWkZ1VC0spp",
+            "flowName": "registerUser"
+        },
+        "inputVariables": [
+            {
+                "key": "form",
+                "map": true,
+                "valueType": "this.page",
+                "value": "res"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "bh.local",
+                "value": "data",
+                "mapVarName": "result",
+                "localVar": "bh.local.data"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "registerUser",
+        "inputParams": [
+            "this.page.res"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_CFCuPoy03YrDUVli",
+        "category": "General",
+        "x": 565,
+        "y": 340,
+        "wires": [
+            [
+                "sd_MB6jtvwtuABiaJwd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_jO75hsR3Wa9VGjvL",
+        "type": "SnackBar",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "bh.local",
+            "value": "message"
+        },
+        "action": {
+            "type": "str",
+            "value": "close"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_jO75hsR3Wa9VGjvL",
+        "category": "General",
+        "x": 723,
+        "y": 428.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_whe4mF6xwGL9tudu",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\n\n// page.users\n// page.users.forEach(function (item) {\n//     bh.local.message = \"\"\n// if(item.email == page.res.email && item.pass == page.res.pass){\n//     console.log(item.email,'Data from SSD')\n//     console.log(page.res.email,'Data from template')\n//     bh.local.message = \"User already exist\"\n//     return bh.local.message = \"User already exist\"\n// }else{\n//     localStorage.setItem(\"user\", JSON.stringify(page.res))\n//     setTimeout( () =>{\n//     //window.location.reload()\n// }, 2000 );  \n//     bh.local.message = \"User Added successfully\"\n// }\n//    console.log(item.email,'Each');\n//    console.log(page.res.email,'from tem');\n// })\n// console.log(page.users,'reg test')",
+        "functionName": "sd_whe4mF6xwGL9tudu",
+        "category": "Function",
+        "x": 445,
+        "y": 340,
+        "wires": [
+            [
+                "sd_CFCuPoy03YrDUVli"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_xqz6HJfAYqx2gyFa",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_lPrYZAfS1PchmD1b",
+            "flowName": "register"
+        },
+        "inputVariables": [
+            {
+                "key": "form",
+                "map": true,
+                "valueType": "this.page",
+                "value": "res"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "bh.local",
+                "value": "data",
+                "mapVarName": "result",
+                "localVar": "bh.local.data"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "register",
+        "inputParams": [
+            "this.page.res"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_xqz6HJfAYqx2gyFa",
+        "category": "General",
+        "x": 445,
+        "y": 520,
+        "wires": [
+            [
+                "sd_gS9jlqYzgrl0frY0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_gHzfazIbroDa2NFk",
+        "type": "SnackBar",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "bh.local",
+            "value": "message"
+        },
+        "action": {
+            "type": "str",
+            "value": "close"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_gHzfazIbroDa2NFk",
+        "category": "General",
+        "x": 710,
+        "y": 520,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_ImcnJrhUKFRt9Sc6",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.res",
+        "functionName": "sd_ImcnJrhUKFRt9Sc6",
+        "category": "Function",
+        "x": 225,
+        "y": 520,
+        "wires": [
+            [
+                "sd_xqz6HJfAYqx2gyFa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_gS9jlqYzgrl0frY0",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.message = bh.local.data[0].message",
+        "functionName": "sd_gS9jlqYzgrl0frY0",
+        "category": "Function",
+        "x": 570,
+        "y": 520,
+        "wires": [
+            [
+                "sd_gHzfazIbroDa2NFk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_oujtPnaj4pIGYa4C",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.users, 'Users from back end Two dashboard')\n\npage.tableData = page.users\n;\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\nconsole.log(page.tableData,\"o\")",
+        "functionName": "sd_oujtPnaj4pIGYa4C",
+        "category": "Function",
+        "x": 765,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_MB6jtvwtuABiaJwd",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_uhO3DaNW3vL9FDMI",
+            "flowName": "getRegUsers"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "users",
+                "mapVarName": "result",
+                "localVar": "this.page.users"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "getRegUsers",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_MB6jtvwtuABiaJwd",
+        "category": "General",
+        "x": 665,
+        "y": 320,
+        "wires": [
+            [
+                "sd_oujtPnaj4pIGYa4C"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_vYH1z8IjTYS2MwZU",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.users, 'Users from back end Two dashboard')\n\npage.tableData = page.users\n;\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\nconsole.log(page.tableData,\"o\")",
+        "functionName": "sd_vYH1z8IjTYS2MwZU",
+        "category": "Function",
+        "x": 525,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_SOFwlDSSvUvqNkd5",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_uhO3DaNW3vL9FDMI",
+            "flowName": "getRegUsers"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "users",
+                "mapVarName": "result",
+                "localVar": "this.page.users"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "getRegUsers",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_SOFwlDSSvUvqNkd5",
+        "category": "General",
+        "x": 365,
+        "y": 260,
+        "wires": [
+            [
+                "sd_vYH1z8IjTYS2MwZU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_e2HzuFaORiXV2IVe",
+        "type": "PageStart",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openEditDialog",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "openEditDialog",
+        "category": "General",
+        "x": 45,
+        "y": 600,
+        "wires": [
+            [
+                "sd_uYXMCxtl2Bc5mOlU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dashboardComponent"
+    },
+    {
+        "id": "sd_nxeRxDpLUHltVAad",
+        "type": "OpenDialog",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_a7OhLBR1QYvAbsH6",
+            "label": "updateDialog"
+        },
+        "relativePath": "./updateDialog",
+        "data": "bh.input.data",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "\"500px\"",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page.editRes",
+        "functionName": "sd_nxeRxDpLUHltVAad",
+        "category": "Dialog",
+        "x": 185,
+        "y": 620,
+        "wires": [
+            [],
+            [
+                "sd_Usb8sL40D0bvskUP"
+            ],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "bh.input",
+                "value": "data",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "str",
+                "value": "500px",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "editRes",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Usb8sL40D0bvskUP",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.editRes, \"Edit Data from after close\");",
+        "functionName": "sd_Usb8sL40D0bvskUP",
+        "category": "Function",
+        "x": 265,
+        "y": 740,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9lOyiBx0t5EcRVxl",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nconsole.log(page.editRes, \"Hello Edit Data\");\nreturn false",
+        "functionName": "sd_9lOyiBx0t5EcRVxl",
+        "category": "Function",
+        "x": 405,
+        "y": 620,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_lpiGQHOfqFkXsUNp",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_M8sGcJ46xJAe5gFK",
+            "flowName": "editUser"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "this.page",
+                "value": "editRes"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "bh.local",
+                "value": "data",
+                "mapVarName": "result",
+                "localVar": "bh.local.data"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "editUser",
+        "inputParams": [
+            "this.page.editRes"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_lpiGQHOfqFkXsUNp",
+        "category": "General",
+        "x": 545,
+        "y": 660,
+        "wires": [
+            [
+                "sd_LAyUoqkv9DogZR0k"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_LAyUoqkv9DogZR0k",
+        "type": "PageCallService",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_uhO3DaNW3vL9FDMI",
+            "flowName": "getRegUsers"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "users",
+                "mapVarName": "result",
+                "localVar": "this.page.users"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "getRegUsers",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_LAyUoqkv9DogZR0k",
+        "category": "General",
+        "x": 645,
+        "y": 660,
+        "wires": [
+            [
+                "sd_SnUi4TKBAYIs9S2Z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_SnUi4TKBAYIs9S2Z",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.users, 'Users from back end Two dashboard')\n\npage.tableData = page.users\n;\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\nconsole.log(page.tableData,\"o\")",
+        "functionName": "sd_SnUi4TKBAYIs9S2Z",
+        "category": "Function",
+        "x": 765,
+        "y": 660,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_amqbFvmlIQ33kPR4",
+        "type": "PageSwitch",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "body",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.body",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_amqbFvmlIQ33kPR4",
+        "category": "Function",
+        "x": 305,
+        "y": 660,
+        "wires": [
+            [
+                "sd_9lOyiBx0t5EcRVxl"
+            ],
+            [
+                "sd_lpiGQHOfqFkXsUNp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_g9rDWyVx6I6HWGmK",
+        "type": "PageSwitch",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "res",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.res",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_g9rDWyVx6I6HWGmK",
+        "category": "Function",
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "sd_whe4mF6xwGL9tudu"
+            ],
+            [
+                "sd_Sr5cP4SfQ84XMmBX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Sr5cP4SfQ84XMmBX",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "return false",
+        "functionName": "sd_Sr5cP4SfQ84XMmBX",
+        "category": "Function",
+        "x": 425,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_uYXMCxtl2Bc5mOlU",
+        "type": "Script",
+        "z": "sd_BxGDqXg5nYTPE4ed",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.data, \"edit\")",
+        "functionName": "sd_uYXMCxtl2Bc5mOlU",
+        "category": "Function",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "sd_nxeRxDpLUHltVAad"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

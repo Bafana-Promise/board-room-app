@@ -1,0 +1,83 @@
+[
+    {
+        "id": "sd_a7OhLBR1QYvAbsH6",
+        "type": "tab",
+        "createdDate": "2022-04-13T11:08:33.257Z",
+        "label": "updateDialog",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "updateDialogComponent"
+    },
+    {
+        "id": "sd_bXSz37g8NjZ2lZdE",
+        "type": "OnInit",
+        "z": "sd_a7OhLBR1QYvAbsH6",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "functionName": "sd_bXSz37g8NjZ2lZdE",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_r6xpnkNnyMF7gGuo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "updateDialogComponent"
+    },
+    {
+        "id": "sd_r6xpnkNnyMF7gGuo",
+        "type": "GetDialogData",
+        "z": "sd_a7OhLBR1QYvAbsH6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "dialogDataMapping": "this.page.data",
+        "functionName": "sd_r6xpnkNnyMF7gGuo",
+        "category": "Dialog",
+        "x": 185,
+        "y": 40,
+        "wires": [
+            [
+                "sd_nhyh8fDnjs1XaFlc"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "dialogDataMapping": {
+                "type": "this.page",
+                "value": "data",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nhyh8fDnjs1XaFlc",
+        "type": "Script",
+        "z": "sd_a7OhLBR1QYvAbsH6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.dm.user = page.data;",
+        "functionName": "sd_nhyh8fDnjs1XaFlc",
+        "category": "Function",
+        "x": 340,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

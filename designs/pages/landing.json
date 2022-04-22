@@ -1,0 +1,465 @@
+[
+    {
+        "id": "sd_eBaDycROih1ZqPEq",
+        "type": "tab",
+        "createdDate": "2022-04-21T07:40:12.021Z",
+        "label": "landing",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_VSYCXVrjo5eTYs2L",
+        "type": "OnInit",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_VSYCXVrjo5eTYs2L",
+        "category": "Lifecycle Events",
+        "x": 25,
+        "y": 40,
+        "wires": [
+            [
+                "sd_6E09qmLnztQg4VUI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_6E09qmLnztQg4VUI",
+        "type": "PageVariables",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "users",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "allBookings",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "graphData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "chartDatasets",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "chartLabels",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "chartColors",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "chartOptions",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "chartType",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "pieChartData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "pedding",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "rejected",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "approved",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            }
+        ],
+        "functionName": "sd_6E09qmLnztQg4VUI",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_vEjSepkJK38rf9I6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_vEjSepkJK38rf9I6",
+        "type": "PageCallService",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_uhO3DaNW3vL9FDMI",
+            "flowName": "getRegUsers"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "users",
+                "mapVarName": "result",
+                "localVar": "this.page.users"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "getRegUsers",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_vEjSepkJK38rf9I6",
+        "category": "General",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_B4hLsB4BGBAptlWE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_B4hLsB4BGBAptlWE",
+        "type": "Script",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.users\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\n// console.log(page.users.length, 'Reg Users Dashboard')\n// console.log(page.allBookings,'Each Bookings dash')",
+        "functionName": "sd_B4hLsB4BGBAptlWE",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_kwp3vkZaFGOEnLes"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_kwp3vkZaFGOEnLes",
+        "type": "PageCallService",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LMZsDDGS2PuFWUUS",
+            "type": "tab",
+            "createdDate": "2022-03-31T19:25:54.512Z",
+            "label": "crudOperation",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_pGnqhjR0zz0oidvc",
+            "flowName": "getAllBooking"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "allBookings",
+                "mapVarName": "result",
+                "localVar": "this.page.allBookings"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/crudOperation",
+        "startName": "getAllBooking",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_kwp3vkZaFGOEnLes",
+        "category": "General",
+        "x": 445,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ZZqtQNd2srzGnLmX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZZqtQNd2srzGnLmX",
+        "type": "Script",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.allBookings, 'Each Bookings dash')\n\npage.chartType = 'line';\npage.chartDatasets = [\n  { data: [65, 59, 80, 81, 56, 55, 40], label: 'This years Bookings' },\n  { data: [28, 48, 40, 19, 86, 27, 90], label: 'Last years booking' }\n];\npage.chartLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];\npage.chartColors = [\n  {\n    backgroundColor: 'rgba(105, 0, 132, .2)',\n    borderColor: 'rgba(200, 99, 132, .7)',\n    borderWidth: 2,\n  },\n  {\n    backgroundColor: 'rgba(0, 137, 132, .2)',\n    borderColor: 'rgba(0, 10, 130, .7)',\n    borderWidth: 2,\n  }\n];\npage.chartOptions = {\n  responsive: true\n};\n\n",
+        "functionName": "sd_ZZqtQNd2srzGnLmX",
+        "category": "Function",
+        "x": 565,
+        "y": 40,
+        "wires": [
+            [
+                "sd_L3c8GRGrenKIHUxX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_OylLbku1fdpQqdlk",
+        "type": "Script",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.event.args.isExploded = !bh.input.event.args.isExploded;",
+        "functionName": "sd_OylLbku1fdpQqdlk",
+        "category": "Function",
+        "x": 265,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_bLHgwP6ZjOMftXKD",
+        "type": "PageStart",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "chartClicked",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "chartClicked",
+        "category": "General",
+        "x": 45,
+        "y": 240,
+        "wires": [
+            [
+                "sd_dPiHNQej0svajohP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_dPiHNQej0svajohP",
+        "type": "Script",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.event);",
+        "functionName": "sd_dPiHNQej0svajohP",
+        "category": "Function",
+        "x": 220,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Ea1J03fnqF8Gj4rI",
+        "type": "PageStart",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "chartHovered",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "chartHovered",
+        "category": "General",
+        "x": 345,
+        "y": 240,
+        "wires": [
+            [
+                "sd_tOIPsvnOk128K5OU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_tOIPsvnOk128K5OU",
+        "type": "Script",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.event);",
+        "functionName": "sd_tOIPsvnOk128K5OU",
+        "category": "Function",
+        "x": 520,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_L3c8GRGrenKIHUxX",
+        "type": "Script",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.pieChartData = [{\n    data: [300, 500, 100]\n}\n];\n\npage.pieChartLabels = ['Last year 2021','Current year 2022', 'Last of last year 2020'];\n\npage.pieChartOptions = {\n    responsive: true\n}\n\npage.allBookings.forEach(function (item) {\n  if(item.status === null){\n    page.pedding.push(item);\n    // console.log(page.pedding,'Pending')\n  }else if(item.status === false){\n    page.rejected.push(item);\n    // console.log('Rejected')\n  }else{\n    page.approved.push(item);\n    // console.log('Approved')\n  }\n  // if(item.status === null){\n  //   page.pedding.push(item);\n  //   console.log(page.pedding,'Pending')\n  // }else if(item.status === false){\n  //   page.rejected.push(item);\n  //   console.log(page.rejected,'Rejected')\n  // }else{\n  //   page.approved.push(item);\n  //   console.log(page.approved,'Approved')\n  // }\n  // console.log(item, 'Each');\n\n})\npage.pedding\npage.rejected\npage.approved\nconsole.log(page.pedding.length,'Pending  OutSide for each');\nconsole.log(page.rejected.length,'Rejected Outside for each');\nconsole.log(page.approved.length,'Approved outside for each');",
+        "functionName": "sd_L3c8GRGrenKIHUxX",
+        "category": "Function",
+        "x": 685,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ByHBoO3qdzOZ4sgy",
+        "type": "PageStart",
+        "z": "sd_eBaDycROih1ZqPEq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "pieSliceClickEvent",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "pieSliceClickEvent",
+        "category": "General",
+        "x": 125,
+        "y": 140,
+        "wires": [
+            [
+                "sd_OylLbku1fdpQqdlk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    }
+]

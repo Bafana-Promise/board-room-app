@@ -1,0 +1,84 @@
+[
+    {
+        "id": "sd_VFpnU6poHP38zigF",
+        "type": "tab",
+        "createdDate": "2022-03-31T11:10:49.912Z",
+        "label": "booking",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "bookingComponent"
+    },
+    {
+        "id": "sd_u1Dd8bSkMlMNfMGr",
+        "type": "OnInit",
+        "z": "sd_VFpnU6poHP38zigF",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_u1Dd8bSkMlMNfMGr",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_uZc1Y8tkbTYV7N1b"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bookingComponent"
+    },
+    {
+        "id": "sd_uZc1Y8tkbTYV7N1b",
+        "type": "PageVariables",
+        "z": "sd_VFpnU6poHP38zigF",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "startDate",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_uZc1Y8tkbTYV7N1b",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_qx1gpBuDqepWoZEo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_qx1gpBuDqepWoZEo",
+        "type": "Script",
+        "z": "sd_VFpnU6poHP38zigF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.startDate = new Date(2019, 0, 1);\n",
+        "functionName": "sd_qx1gpBuDqepWoZEo",
+        "category": "Function",
+        "x": 380,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

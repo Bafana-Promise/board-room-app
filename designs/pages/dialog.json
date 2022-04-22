@@ -1,0 +1,55 @@
+[
+    {
+        "id": "sd_MWGSfjYsXgWfz4ee",
+        "type": "tab",
+        "createdDate": "2022-03-29T12:15:01.275Z",
+        "label": "dialog",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "dialogComponent"
+    },
+    {
+        "id": "sd_n5XA2Tg1aPYjLkSW",
+        "type": "OnInit",
+        "z": "sd_MWGSfjYsXgWfz4ee",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_n5XA2Tg1aPYjLkSW",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_wJHdaoxMINoFiVi3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dialogComponent"
+    },
+    {
+        "id": "sd_wJHdaoxMINoFiVi3",
+        "type": "PageVariables",
+        "z": "sd_MWGSfjYsXgWfz4ee",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_wJHdaoxMINoFiVi3",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

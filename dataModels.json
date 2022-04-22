@@ -1,0 +1,124 @@
+{
+    "ad2f0ac0-b60e-17e3-7552-c81be4790e31": {
+        "dataModelId": "ad2f0ac0-b60e-17e3-7552-c81be4790e31",
+        "name": "user",
+        "description": "user data for Dialog",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "canBook",
+                "fieldType": 4,
+                "isArray": false,
+                "type": "boolean"
+            }
+        ]
+    },
+    "84c0a158-e783-ede9-9c66-e21fc1ab7914": {
+        "dataModelId": "84c0a158-e783-ede9-9c66-e21fc1ab7914",
+        "name": "login",
+        "description": "login",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "4209ce6b-2ab2-3812-31be-89b4dc24221f": {
+        "dataModelId": "4209ce6b-2ab2-3812-31be-89b4dc24221f",
+        "name": "reg",
+        "description": "Registration Model",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "f5c16e0d-6080-bcf5-1732-4bb6dd108ee0": {
+        "dataModelId": "f5c16e0d-6080-bcf5-1732-4bb6dd108ee0",
+        "name": "bookingdm",
+        "description": "Booking Data Model",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "roomNum",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "date",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "time",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "status",
+                "fieldType": 4,
+                "isArray": false,
+                "type": "boolean"
+            }
+        ]
+    }
+}

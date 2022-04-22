@@ -1,0 +1,30 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxFill>
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="49.7" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Icons/boardroom.jpg" class="full-height full-width"></div>
+      <div fxLayout="row wrap" fxFlex="49.7" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="89" fxLayoutGap="12px" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.showLogin">
+          <div fxLayout="column wrap" fxLayoutAlign="start center" [fxShow]="true">
+            <div style="color: #a3cce9;" class="font-weight600 xxlarge-text">
+              Login</div>
+          </div>
+          <form #loginForm="ngForm">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.dm.login.email" name="email" placeholder="Enter Email" [required]="false">
+                  <mat-label>Email</mat-label>
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.dm.login.password" name="password" placeholder="Enter Password" [required]="false">
+                  <mat-label>Password</mat-label>
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" class="btn-bg" fxLayoutGap="15px" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="btn-radius22px" color="primary" (click)="login(loginForm.value)">Login</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

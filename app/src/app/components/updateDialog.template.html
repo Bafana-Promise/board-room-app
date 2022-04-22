@@ -1,0 +1,33 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <form #addUserForm="ngForm">
+      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+        <h1 class="remove-margin">
+          Edit User</h1>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [(ngModel)]="page.dm.user.firstName" name="firstName" placeholder="Name" [required]="false">
+
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [(ngModel)]="page.dm.user.lastName" name="lastName" placeholder="Surname" [required]="false">
+
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [(ngModel)]="page.dm.user.email" name="email" placeholder="Email" [required]="false">
+
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [(ngModel)]="page.dm.user.password" name="password" placeholder="Password" [required]="false">
+
+        </mat-form-field>
+        <div fxLayout="row wrap" style="margin-bottom: 12px;" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+          <mat-checkbox [(ngModel)]="page.dm.user.canBook" name="canBook" color="primary" [required]="false"></mat-checkbox><span>
+                Can book a room</span>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><button mat-raised-button [mat-dialog-close]="addUserForm.value" color="primary">Save</button><button mat-raised-button [mat-dialog-close]="null" color="warn">Cancel</button></div>
+      </div>
+    </form>
+  </div>
+</div>

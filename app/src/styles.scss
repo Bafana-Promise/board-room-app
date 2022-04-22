@@ -1,0 +1,222 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$dark-grey: rgba(0,0,0,.6);
+$white-color: white;
+$skyBlue: rgb(201, 218, 238);
+$aliceblue: aliceblue;
+$navy-blue: #0b1f42;
+$dark-blue: #a3cce9;
+$blue: #486489;
+$red: red;
+$green: green;
+$orange: orange;
+$b: #16aaf5;
+*{
+    font-family: roboto;
+}
+.b-color{
+    color: $b;
+}
+.b-bg{
+    background: $b;
+}
+.blue-color{
+    color: $blue;
+}
+.blue-bg{
+    background: $blue;
+}
+.darkBlue-color{
+    color: $dark-blue;
+}
+.skyblue-color{
+    color: $skyBlue;
+}
+.white-bg{
+    background: $white-color;
+}
+.white-color{
+    color: $white-color;
+}
+.green-color{
+    color: $green;
+}
+.red-color{
+    color: $red;
+}
+.orange-color{
+    color: $orange;
+}
+.green-bg{
+    background: $green;
+}
+.orange-bg{
+    background: $orange;
+}
+.red-bg{
+    background: $red;
+}
+.full-width{
+    width: 100%;
+}
+.dark-blue{
+    color: $navy-blue;
+}
+.full-height{
+    height: 100vh;
+}
+.height-vh9{
+    height: 9vh;
+}
+.text-align{
+    text-align: center;
+}
+.btn-radius22px{
+    border-radius: 22px !important;
+}
+.border-radius50{
+    border-radius: 50%;
+}
+.cursor{
+    cursor: pointer;
+}
+.font-weight600{
+    font-weight: 600;
+}
+.font-size72{
+    font-size: 72px;
+}
+.text-align{ 
+    text-align: center;
+}
+.margin-top8{
+    margin-top: 15.5px;
+}
+.remove-margin{
+    margin: 0 !important;
+}
+.dot-size{
+    width: 4px;
+    height: 4px;
+}
+.side-nav-width21{
+    width: 21%;
+    .mat-drawer-inner-container {
+    background: #f7f9ff87;
+}
+.side-nav-width12{
+    width: 12%;
+}
+}
+.dark-blue-bg{
+    background: $dark-blue;
+}
+.xxlarge-text{
+    font-size: xx-large;
+}
+.xlarge-text{
+    font-size: x-large;
+}
+.side-nav-containerbg{
+    .mat-drawer-backdrop.mat-drawer-shown {
+    background-color: #ffffff00;
+ }
+}
+.position-absolute{
+    position: absolute;
+}
+.side-nav-profileSizing{
+    width: 90px;     
+    height: 90px;
+}
+.sideNav-tool-bar{
+    height: 9vh;
+    background: rgb(196 203 209 / 28%);
+}
+.side-nav-items{
+    padding: 8px;
+    margin: 0px -6px;
+}
+.side-nav:hover{
+    background: $aliceblue;
+    padding: 8px;
+    border-left: 4px solid blue;
+    margin: 0px -6px;
+    color: $blue;
+}
+.active-route{
+    color: $blue;
+    background: $aliceblue;
+    padding: 8px;
+    border-left: 4px solid blue;
+    margin: 0px -6px;
+}
+.toolbar-first-style{
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    border-radius: 50%;
+}
+.btn-bg{
+    .mat-raised-button.mat-primary{
+    background: $dark-blue;
+    border-radius: 22px;
+}
+}
+.reject-btn{
+    border: 1px solid $red !important;
+    color: $red;
+}
+.approve-btn{
+    border: 1px solid green !important;
+    color: green;
+}
+.dashboard-table{
+   td.mat-cell:last-child {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mat-header-row, [mat-header-row]{
+    background: #f7f9ff !important;
+  }
+  .mat-table thead, .mat-table tbody, .mat-table tfoot,  mat-row, mat-footer-row, [mat-row], [mat-footer-row], .mat-table-sticky {
+    background: $white-color !important;
+    cursor: pointer;
+  }
+  .mat-row:hover{
+        background: $aliceblue !important;
+        color: $white-color !important;
+  }
+  .mat-paginator-container {
+    background: #f7f9ff !important;
+}
+  td.mat-cell:first-child {
+    border-radius: 10px 0px 0px 10px;
+  }
+  table {
+  border-spacing: 0 7px !important;
+  }
+  .mat-table {
+    background: $white-color !important;
+  }
+}
+.overflowX{
+    height: 82vh;
+    overflow-x: hidden;
+}
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: $skyBlue; 
+}
+*::-webkit-scrollbar-thumb {
+  background: $skyBlue;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(233, 243, 255);
+}

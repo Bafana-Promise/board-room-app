@@ -1,0 +1,37 @@
+{
+    "routes": [
+        {
+            "component": "loginComponent",
+            "path": "login"
+        },
+        {
+            "component": "homeComponent",
+            "path": "home",
+            "children": [
+                {
+                    "component": "dashboardComponent",
+                    "path": "admin",
+                    "data": ""
+                },
+                {
+                    "component": "manage_memberComponent",
+                    "path": "employee"
+                },
+                {
+                    "component": "landingComponent",
+                    "path": "dashboard"
+                }
+            ]
+        },
+        {
+            "path": "''",
+            "redirectTo": "login",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}
