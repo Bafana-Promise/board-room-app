@@ -7,20 +7,21 @@
       </div>
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput [(ngModel)]="page.dm.bookingdm.roomNum" name="roomNum" type="number" placeholder="Room Number" [required]="false">
-
+          <input matInput [(ngModel)]="page.dm.bookingdm.roomNum" name="roomNum" type="number" placeholder="Room Number" [required]="true" pattern="^[0-9]*$">
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;roomNum&apos;]?.errors?.required">First Name is required</mat-error>
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;roomNum&apos;]?.errors?.pattern">Room number should only contain number</mat-error>
         </mat-form-field>
         <mat-form-field [appearance]="&apos;legacy&apos;">
-          <input matInput placeholder="Date" [matDatepicker]="picker" [(ngModel)]="page.dm.bookingdm.date" name="date" [required]="false" [disabled]="false">
+          <input matInput placeholder="Date" [matDatepicker]="picker" [(ngModel)]="page.dm.bookingdm.date" name="date" [required]="true" [disabled]="false">
           <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
           <mat-datepicker #picker [disabled]="false"></mat-datepicker>
-
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;date&apos;]?.errors?.required">Date is required</mat-error>
         </mat-form-field>
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput [(ngModel)]="page.dm.bookingdm.time" name="time" type="time" placeholder="Time" [required]="false">
-
+          <input matInput [(ngModel)]="page.dm.bookingdm.time" name="time" type="time" placeholder="Time" [required]="true">
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;time&apos;]?.errors?.required">Time is required</mat-error>
         </mat-form-field>
-        <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button color="accent" (click)="addUserForm.reset()">Reset</button><button mat-raised-button [mat-dialog-close]="addUserForm.value" color="primary">Book</button><button mat-raised-button mat-dialog-close color="warn">Cancel Booking</button></div>
+        <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button color="accent" (click)="addUserForm.reset()">Reset</button><button mat-raised-button [mat-dialog-close]="addUserForm.value" color="primary" [disabled]="addUserForm.invalid">Book</button><button mat-raised-button mat-dialog-close color="warn">Cancel Booking</button></div>
       </div>
     </form>
   </div>

@@ -13,11 +13,11 @@
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
               <div fxLayout="row wrap" class="cursor" fxLayoutGap="20px" fxLayoutAlign="start center" [fxShow]="true">
                 <div class="dark-blue-bg toolbar-first-style xlarge-text font-weight600">
-                  {{page.loggedInUser.firstName.charAt(0)}}
+                  {{page.loggedInUser.firstName.charAt(0).toUpperCase()}}
                 </div>
                 <div fxLayout="row wrap" class="cursor" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
                   <div class="font-weight600">
-                    {{page.loggedInUser.firstName}}
+                    {{page.loggedInUser.firstName.toUpperCase()}}
                   </div>
                   <mat-icon class="font-weight600" (click)="logout()">power_settings_new</mat-icon>
                 </div>
@@ -30,7 +30,7 @@
         <div fxLayout="column wrap" style="margin-bottom: 12px;" class="sideNav-tool-bar" fxLayoutAlign="start center" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutGap="13px" fxLayoutAlign="start center" [fxShow]="true">
             <div class="darkBlue-color margin-top8 font-weight600 xlarge-text">
-              {{page.loggedInUser.firstName}} {{page.loggedInUser.lastName}}
+              {{page.loggedInUser.firstName.toUpperCase()}} {{page.loggedInUser.lastName.toUpperCase()}}
             </div>
             <div fxLayout="row wrap" class="darkBlue-color cursor" fxLayoutGap="7px" fxLayoutAlign="start stretch" [fxShow]="true" (click)="sidenav.toggle();page.sideNavOpen = false;" *ngIf="page.sideNavOpen">
               <mat-icon style="right: 12px;  top: 16px;" class="position-absolute">chevron_left</mat-icon>
@@ -43,55 +43,18 @@
             <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="start stretch" [fxShow]="true">
               <div fxLayout="column wrap" fxLayoutGap="6px" fxLayoutAlign="start center" [fxShow]="true">
                 <div class="font-size72 text-align white-color border-radius50 side-nav-profileSizing dark-blue-bg font-weight600">
-                  {{page.loggedInUser.firstName.charAt(0)}}
+                  {{page.loggedInUser.firstName.charAt(0).toUpperCase()}}
                 </div>
                 <div class="blue-color font-weight600">
                   {{page.loggedInUser.email}}
                 </div>
               </div>
-              <div fxLayout="row wrap" class="darkBlue-color side-nav side-nav-items cursor" fxLayoutGap="14px" fxLayoutAlign="start center" [fxShow]="true" routerLinkActive="active-route" routerLink="/home/dashboard">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <mat-icon>dashboard</mat-icon>
-                </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <div class="font-weight600">
-                    Dashboard</div>
-                </div>
-              </div>
-              <div fxLayout="row wrap" class="darkBlue-color side-nav side-nav-items cursor" fxLayoutGap="14px" fxLayoutAlign="start center" [fxShow]="true" routerLinkActive="active-route" routerLink="/home/admin">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <mat-icon>crop_7_5</mat-icon>
-                </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <div class="font-weight600">
-                    Admin </div>
-                </div>
-              </div>
-              <div fxLayout="row wrap" class="darkBlue-color side-nav side-nav-items cursor" fxLayoutGap="14px" fxLayoutAlign="start center" [fxShow]="true" routerLinkActive="active-route" routerLink="/home/employee">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <mat-icon>badge</mat-icon>
-                </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <div class="font-weight600">
-                    Employee</div>
-                </div>
-              </div>
-              <div fxLayout="row wrap" class="darkBlue-color side-nav side-nav-items cursor" fxLayoutGap="14px" fxLayoutAlign="start center" [fxShow]="true" routerLinkActive="active-route" routerLink="/home/#">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <mat-icon>perm_contact_calendar</mat-icon>
-                </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="item.func">
-                  <div class="font-weight600">
-                    Contact</div>
-                </div>
-              </div>
-              <div fxLayout="row wrap" class="darkBlue-color side-nav side-nav-items cursor" fxLayoutGap="14px" fxLayoutAlign="start center" [fxShow]="true">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="logout()">
-                  <mat-icon>power_settings_new</mat-icon>
-                </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)="logout()">
-                  <div class="font-weight600">
-                    Logout</div>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.sidenavItems">
+                <div fxLayout="row wrap" class="side-nav cursor side-nav-items darkBlue-color" fxLayoutAlign="start center" [fxShow]="true" (click)="navigateTo(item.url)" routerLinkActive="active-route" *ngIf="item.show">
+                  <mat-icon>{{item.icon}}</mat-icon>
+                  <div>
+                    {{item.name}}
+                  </div>
                 </div>
               </div>
             </div>

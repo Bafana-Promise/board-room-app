@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-contactComponent
+import { contactComponent } from '../components/contact.component';
 //CORE_REFERENCE_IMPORT-landingComponent
 import { landingComponent } from '../components/landing.component';
 //CORE_REFERENCE_IMPORT-updateDialogComponent
@@ -63,6 +65,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-contactComponent
+  contactComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-landingComponent
   landingComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-updateDialogComponent
@@ -112,6 +116,7 @@ export const appRoutes = [
       { path: 'admin', component: dashboardComponent },
       { path: 'employee', component: manage_memberComponent },
       { path: 'dashboard', component: landingComponent },
+      { path: 'contact', component: contactComponent },
     ],
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },

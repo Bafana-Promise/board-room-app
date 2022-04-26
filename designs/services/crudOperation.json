@@ -343,7 +343,16 @@
         "nodeType": "start",
         "name": "deleteUser",
         "outputs": 1,
-        "inputVariables": [],
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
         "localVariables": [],
         "accept_bh": false,
         "functionName": "deleteUser",
@@ -352,7 +361,7 @@
         "y": 220,
         "wires": [
             [
-                "sd_Q1pPOjVT7Xs6emDY"
+                "sd_qxDAe9UDLgvxbojf"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -367,17 +376,15 @@
         "nodeType": "flow",
         "name": "",
         "method": "delete",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlValue": "deleteUser",
         "url": "deleteUser/:id",
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
-        "reqBody": "",
+        "reqBody": "bh.input.id",
         "reqBodyObj": {
             "mapVarType": "bh.input",
-            "mapVarValue": ""
+            "mapVarValue": "id"
         },
         "resultMapping": "bh.local.result",
         "resultMappingObj": {
@@ -386,11 +393,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "inputVariables": [
             {
@@ -404,7 +409,7 @@
         ],
         "functionName": "sd_Q1pPOjVT7Xs6emDY",
         "category": "HTTP",
-        "x": 260,
+        "x": 305,
         "y": 220,
         "wires": [
             []
@@ -979,12 +984,10 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlValue": "editUser",
         "url": "editUser/:email",
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "reqBody": "bh.input.body",
         "reqBodyObj": {
@@ -998,11 +1001,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "inputVariables": [
             {
@@ -1258,6 +1259,27 @@
         "y": 120,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_qxDAe9UDLgvxbojf",
+        "type": "Script",
+        "z": "sd_LMZsDDGS2PuFWUUS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.id, \"delete user\")",
+        "functionName": "sd_qxDAe9UDLgvxbojf",
+        "category": "Function",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "sd_Q1pPOjVT7Xs6emDY"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

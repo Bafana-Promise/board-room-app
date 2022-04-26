@@ -12,17 +12,16 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { FormControl, Validators, FormBuilder } from '@angular/forms'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-booking',
-  templateUrl: './booking.template.html',
+  selector: 'bh-contact',
+  templateUrl: './contact.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class bookingComponent {
+export class contactComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -31,7 +30,6 @@ export class bookingComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
-    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -40,7 +38,7 @@ export class bookingComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_u1Dd8bSkMlMNfMGr(bh);
+      this.sd_xTvGo8SnmHn0skua(bh);
     }
   }
 
@@ -52,38 +50,24 @@ export class bookingComponent {
     //append_listeners
   }
 
-  sd_u1Dd8bSkMlMNfMGr(bh) {
+  sd_xTvGo8SnmHn0skua(bh) {
     try {
-      bh = this.sd_uZc1Y8tkbTYV7N1b(bh);
-      //appendnew_next_sd_u1Dd8bSkMlMNfMGr
+      bh = this.sd_qvuI3qcxKANobtQ6(bh);
+      //appendnew_next_sd_xTvGo8SnmHn0skua
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_u1Dd8bSkMlMNfMGr');
+      return this.errorHandler(bh, e, 'sd_xTvGo8SnmHn0skua');
     }
   }
 
-  //appendnew_flow_bookingComponent_start
+  //appendnew_flow_contactComponent_start
 
-  sd_uZc1Y8tkbTYV7N1b(bh) {
+  sd_qvuI3qcxKANobtQ6(bh) {
     try {
-      this.page.startDate = undefined;
-      bh = this.sd_qx1gpBuDqepWoZEo(bh);
-      //appendnew_next_sd_uZc1Y8tkbTYV7N1b
+      //appendnew_next_sd_qvuI3qcxKANobtQ6
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uZc1Y8tkbTYV7N1b');
-    }
-  }
-
-  sd_qx1gpBuDqepWoZEo(bh) {
-    try {
-      const page = this.page;
-      page.startDate = new Date(2019, 0, 1);
-
-      //appendnew_next_sd_qx1gpBuDqepWoZEo
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qx1gpBuDqepWoZEo');
+      return this.errorHandler(bh, e, 'sd_qvuI3qcxKANobtQ6');
     }
   }
 
@@ -109,5 +93,5 @@ export class bookingComponent {
       throw e;
     }
   }
-  //appendnew_flow_bookingComponent_Catch
+  //appendnew_flow_contactComponent_Catch
 }

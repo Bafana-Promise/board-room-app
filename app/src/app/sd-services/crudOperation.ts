@@ -116,14 +116,16 @@ export class crudOperation {
     }
   }
 
-  async deleteUser(...others) {
+  async deleteUser(id: any = undefined, ...others) {
     try {
       var bh: any = {
-        input: {},
+        input: {
+          id: id,
+        },
         local: {},
       };
       bh = this.sdService.__constructDefault(bh);
-      bh = await this.sd_Q1pPOjVT7Xs6emDY(bh);
+      bh = await this.sd_qxDAe9UDLgvxbojf(bh);
       //appendnew_next_deleteUser
       return (
         // formatting output variables
@@ -458,6 +460,17 @@ export class crudOperation {
     }
   }
 
+  async sd_qxDAe9UDLgvxbojf(bh) {
+    try {
+      console.log(bh.input.id, 'delete user');
+      bh = await this.sd_Q1pPOjVT7Xs6emDY(bh);
+      //appendnew_next_sd_qxDAe9UDLgvxbojf
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_qxDAe9UDLgvxbojf');
+    }
+  }
+
   async sd_Q1pPOjVT7Xs6emDY(bh) {
     try {
       let basePath = bh.system.environment.properties.ssdURL.endsWith('/')
@@ -472,7 +485,7 @@ export class crudOperation {
         reportProgress: undefined,
         headers: {},
         params: {},
-        body: undefined,
+        body: bh.input.id,
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_Q1pPOjVT7Xs6emDY

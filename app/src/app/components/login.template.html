@@ -12,15 +12,19 @@
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                  <input matInput [(ngModel)]="page.dm.login.email" name="email" placeholder="Enter Email" [required]="false">
+                  <input matInput [(ngModel)]="page.dm.login.email" name="email" type="email" placeholder="Enter Email" [required]="true" email>
+                  <mat-error align="start" *ngIf="loginForm.controls[&apos;email&apos;]?.errors?.required">Email is required</mat-error>
+                  <mat-error align="start" *ngIf="loginForm.controls[&apos;email&apos;]?.errors?.email">Invalid email address</mat-error>
                   <mat-label>Email</mat-label>
                 </mat-form-field>
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                  <input matInput [(ngModel)]="page.dm.login.password" name="password" placeholder="Enter Password" [required]="false">
+                  <input matInput [(ngModel)]="page.dm.login.password" name="password" placeholder="Enter Password" [required]="true" maxlength="15" minlength="4">
+                  <mat-error align="start" *ngIf="loginForm.controls[&apos;password&apos;]?.errors?.required">Password is required</mat-error>
+                  <mat-error align="start" *ngIf="loginForm.controls[&apos;password&apos;]?.errors?.minlength">Password Maximum Length is more than 4</mat-error>
                   <mat-label>Password</mat-label>
                 </mat-form-field>
               </div>
-              <div fxLayout="column wrap" class="btn-bg" fxLayoutGap="15px" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="btn-radius22px" color="primary" (click)="login(loginForm.value)">Login</button></div>
+              <div fxLayout="column wrap" class="btn-bg" fxLayoutGap="15px" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="btn-radius22px" color="primary" (click)="login(loginForm.value)" [disabled]="loginForm.invalid">Login</button></div>
             </div>
           </form>
         </div>

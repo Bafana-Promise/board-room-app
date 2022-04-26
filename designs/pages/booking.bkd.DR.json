@@ -565,7 +565,7 @@
                             },
                             {
                                 "_key": "[required]",
-                                "_value": "false",
+                                "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -632,7 +632,24 @@
                             },
                             {
                                 "_key": "matError",
-                                "_value": [],
+                                "_value": [
+                                    {
+                                        "input1": "addUserForm.controls['roomNum']?.errors?.required",
+                                        "input2": "First Name is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    },
+                                    {
+                                        "input1": "addUserForm.controls['roomNum']?.errors?.pattern",
+                                        "input2": "Room number should only contain number",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
@@ -692,6 +709,12 @@
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
+                            },
+                            {
+                                "_key": "pattern",
+                                "_value": "^[0-9]*$",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ]
                     },
@@ -884,7 +907,7 @@
                             },
                             {
                                 "_key": "[required]",
-                                "_value": "false",
+                                "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -926,7 +949,16 @@
                             },
                             {
                                 "_key": "matError",
-                                "_value": [],
+                                "_value": [
+                                    {
+                                        "input1": "addUserForm.controls['date']?.errors?.required",
+                                        "input2": "Date is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
@@ -1783,7 +1815,7 @@
                             },
                             {
                                 "_key": "[required]",
-                                "_value": "false",
+                                "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1850,7 +1882,16 @@
                             },
                             {
                                 "_key": "matError",
-                                "_value": [],
+                                "_value": [
+                                    {
+                                        "input1": "addUserForm.controls['time']?.errors?.required",
+                                        "input2": "Time is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
@@ -2415,9 +2456,10 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "",
+                                    "_value": "addUserForm.invalid",
                                     "_type": "kv",
-                                    "_attrDef": "p"
+                                    "_attrDef": "p",
+                                    "_customAttributeFlag": "customInput"
                                 },
                                 {
                                     "_key": "[disableRipple]",

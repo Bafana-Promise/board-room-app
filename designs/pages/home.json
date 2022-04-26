@@ -99,6 +99,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "admin",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_QLL89PJFFkfl06Kr",
@@ -122,10 +129,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.sidenavItems = [\n    { url: \"/home/dashboard\", icon: \"dashboard\", name: \"Dashboard\" },\n    { url: \"/home/#\", icon: \"perm_contact_calendar\", name: \"Contact\" },\n    { url: \"/home/#\", icon: \"power_settings_new\", name: \"Logout\", func: \"logout()\" }\n]\npage.loggedInUser = JSON.parse(sessionStorage.getItem(\"user\"));\nconsole.log(page.loggedInUser, \"One Session\")\nif (page.sideNavOpen == true) {\n    page.sideNavWidth = \"12\";\n    console.log(page.sideNavWidth,page.sideNavOpen)\n}else{\n    page.sideNavWidth = \"21\";\n    console.log(page.sideNavWidth,page.sideNavOpen)\n}\nconsole.log(page.sideNavWidth, \"Click for side nav\");",
+        "script": "page.loggedInUser = JSON.parse(sessionStorage.getItem(\"user\"));\npage.admin = page.loggedInUser.email.includes('admin') \npage.sidenavItems = [\n    { url: \"/home/dashboard\", icon: \"dashboard\", name: \"Dashboard\", show: true },\n    { url: \"/home/admin\", icon: \"groups\", name: \"Users\", show: page.admin },\n    { url: \"/home/employee\", icon: \"event_note\", name: \"Bookings\", show: page.admin },\n    { url: \"/home/employee\", icon: \"event_note\", name: \"Bookings\", show: !page.admin },\n    { url: \"Logout\", icon: \"power_settings_new\", name: \"Logout\", show: true }\n]\nconsole.log(page.loggedInUser, \"One Session\")\nif (page.sideNavOpen == true) {\n    page.sideNavWidth = \"12\";\n    console.log(page.sideNavWidth,page.sideNavOpen)\n}else{\n    page.sideNavWidth = \"21\";\n    console.log(page.sideNavWidth,page.sideNavOpen)\n}\nconsole.log(page.sideNavWidth, \"Click for side nav\");",
         "functionName": "sd_QhGoHZOb0IOg3UpN",
         "category": "Function",
-        "x": 365,
+        "x": 345,
         "y": 40,
         "wires": [
             []
@@ -178,7 +185,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "homeComponent"
     },
     {
         "id": "sd_W68nhsn0lsk23CO6",
@@ -193,8 +201,8 @@
         "flow_type": "sync",
         "functionName": "menuOpen",
         "category": "General",
-        "x": 80,
-        "y": 260,
+        "x": 345,
+        "y": 340,
         "wires": [
             [
                 "sd_L97xzNGPHWu87dvJ"
@@ -214,8 +222,8 @@
         "script": "if(page.menuBarOpen){\n    page.iconName = \"expand_more\";\n    page.menuBarOpen = false;\n}else{\n    page.iconName = \"expand_less\";\n    page.menuBarOpen = true;\n}",
         "functionName": "sd_L97xzNGPHWu87dvJ",
         "category": "Function",
-        "x": 260,
-        "y": 260,
+        "x": 525,
+        "y": 340,
         "wires": [
             []
         ],
@@ -348,6 +356,98 @@
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_AjagrSuaeSzojZdc",
+        "type": "PageStart",
+        "z": "sd_MgY1Vrjr2z0EA2tw",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "navigateTo",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "url",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "navigateTo",
+        "category": "General",
+        "x": 85,
+        "y": 260,
+        "wires": [
+            [
+                "sd_7yzES5FGTuEAVgtP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_qLcvlpMEP3fuMg2y",
+        "type": "Script",
+        "z": "sd_MgY1Vrjr2z0EA2tw",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "window.location.href = bh.input.url",
+        "functionName": "sd_qLcvlpMEP3fuMg2y",
+        "category": "Function",
+        "x": 365,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_7yzES5FGTuEAVgtP",
+        "type": "PageSwitch",
+        "z": "sd_MgY1Vrjr2z0EA2tw",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "url",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.url",
+        "rules": [
+            {
+                "t": "se",
+                "v": "Logout",
+                "vt": "str",
+                "gv": "\"Logout\""
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_7yzES5FGTuEAVgtP",
+        "category": "Function",
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "sd_gzr5GmvZpFLPdFdx"
+            ],
+            [
+                "sd_qLcvlpMEP3fuMg2y"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

@@ -490,11 +490,20 @@
             "flowId": "sd_iROl80nDTtR2K3aD",
             "flowName": "deleteUser"
         },
-        "inputVariables": [],
+        "inputVariables": [
+            {
+                "key": "id",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "id"
+            }
+        ],
         "outputMapping": [],
         "serviceImportPath": "app/sd-services/crudOperation",
         "startName": "deleteUser",
-        "inputParams": [],
+        "inputParams": [
+            "bh.input.id"
+        ],
         "accept_bh": false,
         "accept_csd": true,
         "functionName": "sd_1nscaOORocM3clrV",
@@ -1174,7 +1183,9 @@
         "x": 265,
         "y": 740,
         "wires": [
-            []
+            [
+                "sd_lpiGQHOfqFkXsUNp"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1256,7 +1267,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": false,
+        "generated": true
     },
     {
         "id": "sd_LAyUoqkv9DogZR0k",
@@ -1307,7 +1319,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": false,
+        "generated": true
     },
     {
         "id": "sd_SnUi4TKBAYIs9S2Z",
@@ -1325,7 +1338,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": false,
+        "generated": true
     },
     {
         "id": "sd_amqbFvmlIQ33kPR4",
@@ -1356,9 +1370,7 @@
             [
                 "sd_9lOyiBx0t5EcRVxl"
             ],
-            [
-                "sd_lpiGQHOfqFkXsUNp"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true

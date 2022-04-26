@@ -438,7 +438,6 @@
                 }
             }
         },
-        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -452,7 +451,7 @@
         "y": 280,
         "wires": [
             [
-                "sd_KMQ6MId07otZnQMX"
+                "sd_389eJa4iJcotvnzB"
             ]
         ],
         "__ssdTypeInputs__": {
@@ -488,7 +487,7 @@
         "operations": "",
         "query": "bh",
         "fieldOrSpec": "",
-        "filter": "bh.input.body",
+        "filter": "bh.input.filter",
         "key": "",
         "docId": "",
         "indexName": "",
@@ -537,7 +536,7 @@
             },
             "filter": {
                 "type": "bh.input",
-                "value": "body",
+                "value": "filter",
                 "constant": false
             }
         },
@@ -2670,6 +2669,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -2795,6 +2795,7 @@
             "obj": "bh.local.result",
             "send": "bh.local.result"
         },
+        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -2810,6 +2811,27 @@
         "x": 645,
         "y": 200,
         "wires": [],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_389eJa4iJcotvnzB",
+        "type": "Script",
+        "z": "SSD_SERVICE_ID_sd_zTK0XIvjyudo8Bkp",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let objId = require('mongodb').ObjectId;\nlet _id = new objId(bh.input.params.id);\nbh.input.filter = {\n    _id\n}\nconsole.log(bh)",
+        "functionName": "sd_389eJa4iJcotvnzB",
+        "category": "Function",
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "sd_KMQ6MId07otZnQMX"
+            ]
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

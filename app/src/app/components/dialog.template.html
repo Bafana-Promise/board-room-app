@@ -7,26 +7,30 @@
       </div>
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput [(ngModel)]="page.dm.user.firstName" name="firstName" placeholder="Name" [required]="false">
-
+          <input matInput [(ngModel)]="page.dm.user.firstName" name="firstName" placeholder="Name" [required]="true" pattern="^[a-zA-Z]+$">
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;firstName&apos;]?.errors?.required">First Name is required</mat-error>
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;firstName&apos;]?.errors?.pattern">Only Letters allowed</mat-error>
         </mat-form-field>
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput [(ngModel)]="page.dm.user.lastName" name="lastName" placeholder="Surname" [required]="false">
-
+          <input matInput [(ngModel)]="page.dm.user.lastName" name="lastName" placeholder="Surname" [required]="true" pattern="^[a-zA-Z]+$">
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;lastName&apos;]?.errors?.required">Last Name is required</mat-error>
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;lastName&apos;]?.errors?.pattern">Only Letters allowed</mat-error>
         </mat-form-field>
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput [(ngModel)]="page.dm.user.email" name="email" placeholder="Email" [required]="false">
-
+          <input matInput [(ngModel)]="page.dm.user.email" name="email" placeholder="Email" [required]="true" email>
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;email&apos;]?.errors?.required">Email is required</mat-error>
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;email&apos;]?.errors?.email">Invalid email address</mat-error>
         </mat-form-field>
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput [(ngModel)]="page.dm.user.password" name="password" placeholder="Password" [required]="false">
-
+          <input matInput [(ngModel)]="page.dm.user.password" name="password" placeholder="Password" [required]="true" minlength="4">
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;password&apos;]?.errors?.required">Password is required</mat-error>
+          <mat-error align="start" *ngIf="addUserForm.controls[&apos;password&apos;]?.errors?.minlength">Password Maximum Length is more than 4</mat-error>
         </mat-form-field>
         <div fxLayout="row wrap" style="margin-bottom: 12px;" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
           <mat-checkbox [(ngModel)]="page.dm.user.canBook" name="canBook" color="primary" [required]="false"></mat-checkbox><span>
                 Can Book a room</span>
         </div>
-        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><button mat-raised-button color="accent" (click)="addUserForm.reset()">Reset</button><button mat-raised-button [mat-dialog-close]="addUserForm.value" color="primary">Add</button><button mat-raised-button [mat-dialog-close]="null" color="warn">Cancel</button></div>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><button mat-raised-button color="accent" (click)="addUserForm.reset()">Reset</button><button mat-raised-button [mat-dialog-close]="addUserForm.value" color="primary" [disabled]="addUserForm.invalid">Add</button><button mat-raised-button [mat-dialog-close]="null" color="warn">Cancel</button></div>
       </div>
     </form>
   </div>

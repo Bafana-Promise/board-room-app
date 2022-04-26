@@ -241,7 +241,7 @@ export class backEndCrudOperation {
             res,
             next
           );
-          bh = await this.sd_KMQ6MId07otZnQMX(bh);
+          bh = await this.sd_389eJa4iJcotvnzB(bh);
           //appendnew_next_sd_ZfvDF573EaE3z7OZ
         } catch (e) {
           return await this.errorHandler(bh, e, 'sd_ZfvDF573EaE3z7OZ');
@@ -908,12 +908,28 @@ export class backEndCrudOperation {
     }
   }
 
+  async sd_389eJa4iJcotvnzB(bh) {
+    try {
+      let objId = require('mongodb').ObjectId;
+      let _id = new objId(bh.input.params.id);
+      bh.input.filter = {
+        _id,
+      };
+      console.log(bh);
+      bh = await this.sd_KMQ6MId07otZnQMX(bh);
+      //appendnew_next_sd_389eJa4iJcotvnzB
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_389eJa4iJcotvnzB');
+    }
+  }
+
   async sd_KMQ6MId07otZnQMX(bh) {
     try {
       bh.local.result = await MongoPersistance.getInstance().findOneAndDelete(
         'sd_5d4j83WQZkjpBWao',
         'users',
-        bh.input.body,
+        bh.input.filter,
         {}
       );
       await this.sd_XXWZnlNKVoYpn2Hw(bh);

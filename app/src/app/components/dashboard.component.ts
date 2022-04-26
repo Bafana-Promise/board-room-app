@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  HostListener,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -377,7 +378,7 @@ export class dashboardComponent {
       const crudOperationInstance: crudOperation =
         this.__page_injector__.get(crudOperation);
 
-      let outputVariables = await crudOperationInstance.deleteUser();
+      let outputVariables = await crudOperationInstance.deleteUser(bh.input.id);
 
       bh = this.sd_SOFwlDSSvUvqNkd5(bh);
       //appendnew_next_sd_1nscaOORocM3clrV
@@ -456,10 +457,62 @@ export class dashboardComponent {
     try {
       const page = this.page;
       console.log(page.editRes, 'Edit Data from after close');
+      bh = this.sd_lpiGQHOfqFkXsUNp(bh);
       //appendnew_next_sd_Usb8sL40D0bvskUP
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Usb8sL40D0bvskUP');
+    }
+  }
+
+  async sd_lpiGQHOfqFkXsUNp(bh) {
+    try {
+      const crudOperationInstance: crudOperation =
+        this.__page_injector__.get(crudOperation);
+
+      let outputVariables = await crudOperationInstance.editUser(
+        this.page.editRes
+      );
+      bh.local.data = outputVariables.local.result;
+
+      bh = this.sd_LAyUoqkv9DogZR0k(bh);
+      //appendnew_next_sd_lpiGQHOfqFkXsUNp
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_lpiGQHOfqFkXsUNp');
+    }
+  }
+
+  async sd_LAyUoqkv9DogZR0k(bh) {
+    try {
+      const crudOperationInstance: crudOperation =
+        this.__page_injector__.get(crudOperation);
+
+      let outputVariables = await crudOperationInstance.getRegUsers();
+      this.page.users = outputVariables.local.result;
+
+      bh = this.sd_SnUi4TKBAYIs9S2Z(bh);
+      //appendnew_next_sd_LAyUoqkv9DogZR0k
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_LAyUoqkv9DogZR0k');
+    }
+  }
+
+  sd_SnUi4TKBAYIs9S2Z(bh) {
+    try {
+      const page = this.page;
+      console.log(page.users, 'Users from back end Two dashboard');
+
+      page.tableData = page.users;
+      //page.users.forEach(function (item) {
+      //   console.log(item,'Each');
+      //})
+      console.log(page.tableData, 'o');
+      //appendnew_next_sd_SnUi4TKBAYIs9S2Z
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SnUi4TKBAYIs9S2Z');
     }
   }
 

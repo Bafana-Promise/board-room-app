@@ -20,6 +20,10 @@
                 {
                     "component": "landingComponent",
                     "path": "dashboard"
+                },
+                {
+                    "component": "contactComponent",
+                    "path": "contact"
                 }
             ]
         },

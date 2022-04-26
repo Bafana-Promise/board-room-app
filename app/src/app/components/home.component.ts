@@ -8,7 +8,6 @@ import {
   Input,
   Output,
   EventEmitter,
-  AfterViewInit,
   HostListener,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -118,6 +117,20 @@ export class homeComponent {
     }
   }
 
+  navigateTo(url: any = undefined, ...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { url: url };
+      bh.local = {};
+      bh = this.sd_7yzES5FGTuEAVgtP(bh);
+      //appendnew_next_navigateTo
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AjagrSuaeSzojZdc');
+    }
+  }
+
   //appendnew_flow_homeComponent_start
 
   sd_QLL89PJFFkfl06Kr(bh) {
@@ -130,6 +143,7 @@ export class homeComponent {
       this.page.users = undefined;
       this.page.loggedInUser = undefined;
       this.page.sideNavWidth = undefined;
+      this.page.admin = undefined;
       bh = this.sd_QhGoHZOb0IOg3UpN(bh);
       //appendnew_next_sd_QLL89PJFFkfl06Kr
       return bh;
@@ -141,17 +155,35 @@ export class homeComponent {
   sd_QhGoHZOb0IOg3UpN(bh) {
     try {
       const page = this.page;
+      page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
+      page.admin = page.loggedInUser.email.includes('admin');
       page.sidenavItems = [
-        { url: '/home/dashboard', icon: 'dashboard', name: 'Dashboard' },
-        { url: '/home/#', icon: 'perm_contact_calendar', name: 'Contact' },
         {
-          url: '/home/#',
+          url: '/home/dashboard',
+          icon: 'dashboard',
+          name: 'Dashboard',
+          show: true,
+        },
+        { url: '/home/admin', icon: 'groups', name: 'Users', show: page.admin },
+        {
+          url: '/home/employee',
+          icon: 'event_note',
+          name: 'Bookings',
+          show: page.admin,
+        },
+        {
+          url: '/home/employee',
+          icon: 'event_note',
+          name: 'Bookings',
+          show: !page.admin,
+        },
+        {
+          url: 'Logout',
           icon: 'power_settings_new',
           name: 'Logout',
-          func: 'logout()',
+          show: true,
         },
       ];
-      page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
       console.log(page.loggedInUser, 'One Session');
       if (page.sideNavOpen == true) {
         page.sideNavWidth = '12';
@@ -250,6 +282,49 @@ export class homeComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_NlstkRWqYTCSmxJZ');
+    }
+  }
+
+  async sd_7yzES5FGTuEAVgtP(bh) {
+    try {
+      let otherwiseFlag = true;
+      if (
+        this.sdService.operators['se'](
+          bh.input.url,
+          'Logout',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_gzr5GmvZpFLPdFdx(bh);
+        otherwiseFlag = false;
+      }
+      if (
+        this.sdService.operators['else'](
+          otherwiseFlag,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = await this.sd_qLcvlpMEP3fuMg2y(bh);
+        otherwiseFlag = false;
+      }
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_7yzES5FGTuEAVgtP');
+    }
+  }
+
+  sd_qLcvlpMEP3fuMg2y(bh) {
+    try {
+      const page = this.page;
+      window.location.href = bh.input.url;
+      //appendnew_next_sd_qLcvlpMEP3fuMg2y
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qLcvlpMEP3fuMg2y');
     }
   }
 

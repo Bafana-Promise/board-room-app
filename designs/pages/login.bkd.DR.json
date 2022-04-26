@@ -2519,7 +2519,7 @@
                                             },
                                             {
                                                 "_key": "[required]",
-                                                "_value": "false",
+                                                "_value": "true",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2543,7 +2543,7 @@
                                             },
                                             {
                                                 "_key": "type",
-                                                "_value": "",
+                                                "_value": "email",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2586,7 +2586,24 @@
                                             },
                                             {
                                                 "_key": "matError",
-                                                "_value": [],
+                                                "_value": [
+                                                    {
+                                                        "input1": "loginForm.controls['email']?.errors?.required",
+                                                        "input2": "Email is required",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "start"
+                                                        }
+                                                    },
+                                                    {
+                                                        "input1": "loginForm.controls['email']?.errors?.email",
+                                                        "input2": "Invalid email address",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "start"
+                                                        }
+                                                    }
+                                                ],
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": true
@@ -2646,6 +2663,12 @@
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": true
+                                            },
+                                            {
+                                                "_key": "email",
+                                                "_value": "email",
+                                                "_type": "a",
+                                                "_attrDef": "c"
                                             }
                                         ]
                                     },
@@ -2688,7 +2711,7 @@
                                             },
                                             {
                                                 "_key": "[required]",
-                                                "_value": "false",
+                                                "_value": "true",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2755,7 +2778,24 @@
                                             },
                                             {
                                                 "_key": "matError",
-                                                "_value": [],
+                                                "_value": [
+                                                    {
+                                                        "input1": "loginForm.controls['password']?.errors?.required",
+                                                        "input2": "Password is required",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "start"
+                                                        }
+                                                    },
+                                                    {
+                                                        "input1": "loginForm.controls['password']?.errors?.minlength",
+                                                        "input2": "Password Maximum Length is more than 4",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "start"
+                                                        }
+                                                    }
+                                                ],
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": true
@@ -2815,6 +2855,18 @@
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": true
+                                            },
+                                            {
+                                                "_key": "maxlength",
+                                                "_value": "15",
+                                                "_type": "kv",
+                                                "_attrDef": "c"
+                                            },
+                                            {
+                                                "_key": "minlength",
+                                                "_value": "4",
+                                                "_type": "kv",
+                                                "_attrDef": "c"
                                             }
                                         ]
                                     }
@@ -3147,9 +3199,10 @@
                                             },
                                             {
                                                 "_key": "[disabled]",
-                                                "_value": "",
+                                                "_value": "loginForm.invalid",
                                                 "_type": "kv",
-                                                "_attrDef": "p"
+                                                "_attrDef": "p",
+                                                "_customAttributeFlag": "customInput"
                                             },
                                             {
                                                 "_key": "[disableRipple]",

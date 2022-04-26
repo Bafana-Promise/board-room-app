@@ -75,6 +75,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "loginValidation",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_yq9w9xH97S4FJFI6",
@@ -167,7 +174,7 @@
         "script": "page.loggedUser = JSON.parse(sessionStorage.getItem(\"user\"));\nconsole.log(page.loggedUser,\"Back From Session Store\")\n",
         "functionName": "sd_2XzmeSVA2SPIwrKk",
         "category": "Function",
-        "x": 400,
+        "x": 285,
         "y": 40,
         "wires": [
             [
@@ -440,10 +447,12 @@
         "accept_csd": true,
         "functionName": "sd_NDHNw4bIMSMLVG2w",
         "category": "General",
-        "x": 600,
+        "x": 405,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_sBStGOfPilpjIeBx"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -456,16 +465,17 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.users\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\nconsole.log(page.users, 'Reg Users')",
+        "script": "page.users\n//page.users.forEach(function (item) {\n //   console.log(item,'Each');\n//})\n// page.loginValidation = loginForm\nconsole.log(page.users, 'Validation')",
         "functionName": "sd_xRcK20MztLiA2Mxj",
         "category": "Function",
-        "x": 800,
+        "x": 685,
         "y": 40,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": false,
+        "generated": true
     },
     {
         "id": "sd_DBOmdUbMGZmEKKYR",
@@ -503,6 +513,27 @@
         "wires": [
             [
                 "sd_BVaumbAX4ND7k4yH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_sBStGOfPilpjIeBx",
+        "type": "Script",
+        "z": "sd_gxjA3qJYlinZN7G5",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "",
+        "functionName": "sd_sBStGOfPilpjIeBx",
+        "category": "Function",
+        "x": 545,
+        "y": 40,
+        "wires": [
+            [
+                "sd_xRcK20MztLiA2Mxj"
             ]
         ],
         "__n_excludedFromValidation__": {},

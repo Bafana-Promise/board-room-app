@@ -101,6 +101,7 @@ export class loginComponent {
       this.page.loggedUser = undefined;
       this.page.regUsers = undefined;
       this.page.users = undefined;
+      this.page.loginValidation = undefined;
       bh = this.sd_2XzmeSVA2SPIwrKk(bh);
       //appendnew_next_sd_yq9w9xH97S4FJFI6
       return bh;
@@ -131,10 +132,37 @@ export class loginComponent {
       let outputVariables = await crudOperationInstance.getRegUsers();
       this.page.users = outputVariables.local.result;
 
+      bh = this.sd_sBStGOfPilpjIeBx(bh);
       //appendnew_next_sd_NDHNw4bIMSMLVG2w
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_NDHNw4bIMSMLVG2w');
+    }
+  }
+
+  sd_sBStGOfPilpjIeBx(bh) {
+    try {
+      bh = this.sd_xRcK20MztLiA2Mxj(bh);
+      //appendnew_next_sd_sBStGOfPilpjIeBx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_sBStGOfPilpjIeBx');
+    }
+  }
+
+  sd_xRcK20MztLiA2Mxj(bh) {
+    try {
+      const page = this.page;
+      page.users;
+      //page.users.forEach(function (item) {
+      //   console.log(item,'Each');
+      //})
+      // page.loginValidation = loginForm
+      console.log(page.users, 'Validation');
+      //appendnew_next_sd_xRcK20MztLiA2Mxj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xRcK20MztLiA2Mxj');
     }
   }
 
