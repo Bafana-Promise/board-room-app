@@ -757,7 +757,7 @@ export class crudOperation {
 
   async sd_f1mLlPu6F8btJERW(bh) {
     try {
-      console.log(bh.local.result, 'CSD Bookings for dash');
+      // console.log(bh.local.result, "CSD Bookings for dash")
       //appendnew_next_sd_f1mLlPu6F8btJERW
       return bh;
     } catch (e) {

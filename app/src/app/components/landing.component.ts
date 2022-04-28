@@ -120,6 +120,10 @@ export class landingComponent {
       this.page.pedding = [];
       this.page.rejected = [];
       this.page.approved = [];
+      this.page.canBook = undefined;
+      this.page.peddingUser = [];
+      this.page.rejectedUser = [];
+      this.page.approvedUser = [];
       bh = this.sd_vEjSepkJK38rf9I6(bh);
       //appendnew_next_sd_6E09qmLnztQg4VUI
       return bh;
@@ -153,7 +157,7 @@ export class landingComponent {
       //})
       // console.log(page.users.length, 'Reg Users Dashboard')
       // console.log(page.allBookings,'Each Bookings dash')
-      bh = this.sd_kwp3vkZaFGOEnLes(bh);
+      bh = this.sd_GqzGDK7FWhP2ILV1(bh);
       //appendnew_next_sd_B4hLsB4BGBAptlWE
       return bh;
     } catch (e) {
@@ -161,7 +165,7 @@ export class landingComponent {
     }
   }
 
-  async sd_kwp3vkZaFGOEnLes(bh) {
+  async sd_GqzGDK7FWhP2ILV1(bh) {
     try {
       const crudOperationInstance: crudOperation =
         this.__page_injector__.get(crudOperation);
@@ -170,17 +174,16 @@ export class landingComponent {
       this.page.allBookings = outputVariables.local.result;
 
       bh = this.sd_ZZqtQNd2srzGnLmX(bh);
-      //appendnew_next_sd_kwp3vkZaFGOEnLes
+      //appendnew_next_sd_GqzGDK7FWhP2ILV1
       return bh;
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_kwp3vkZaFGOEnLes');
+      return await this.errorHandler(bh, e, 'sd_GqzGDK7FWhP2ILV1');
     }
   }
 
   sd_ZZqtQNd2srzGnLmX(bh) {
     try {
-      const page = this.page;
-      console.log(page.allBookings, 'Each Bookings dash');
+      const page = this.page; // console.log(page.allBookings, 'Each Bookings dash')
 
       page.chartType = 'line';
       page.chartDatasets = [
@@ -223,6 +226,13 @@ export class landingComponent {
   sd_L3c8GRGrenKIHUxX(bh) {
     try {
       const page = this.page;
+      let email = JSON.parse(sessionStorage.getItem('user')).email;
+      page.owner = {
+        email,
+      };
+      page.admin = email.includes('admin');
+      page.canBook = JSON.parse(sessionStorage.getItem('user'));
+
       page.pieChartData = [
         {
           data: [300, 500, 100],
@@ -250,28 +260,65 @@ export class landingComponent {
           page.approved.push(item);
           // console.log('Approved')
         }
-        // if(item.status === null){
-        //   page.pedding.push(item);
-        //   console.log(page.pedding,'Pending')
-        // }else if(item.status === false){
-        //   page.rejected.push(item);
-        //   console.log(page.rejected,'Rejected')
-        // }else{
-        //   page.approved.push(item);
-        //   console.log(page.approved,'Approved')
-        // }
-        // console.log(item, 'Each');
       });
-      page.pedding;
-      page.rejected;
-      page.approved;
-      console.log(page.pedding.length, 'Pending  OutSide for each');
-      console.log(page.rejected.length, 'Rejected Outside for each');
-      console.log(page.approved.length, 'Approved outside for each');
+      // page.pedding
+      // page.rejected
+      // page.approved
+      // console.log(page.pedding.length,'Pending  OutSide for each');
+      // console.log(page.rejected.length,'Rejected Outside for each');
+      // console.log(page.approved.length,'Approved outside for each');
+
+      bh = this.sd_8AFpAhv2LmP8amr7(bh);
       //appendnew_next_sd_L3c8GRGrenKIHUxX
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_L3c8GRGrenKIHUxX');
+    }
+  }
+
+  async sd_8AFpAhv2LmP8amr7(bh) {
+    try {
+      const crudOperationInstance: crudOperation =
+        this.__page_injector__.get(crudOperation);
+
+      let outputVariables = await crudOperationInstance.getUserBookings(
+        this.page.owner
+      );
+      this.page.bookings = outputVariables.local.result;
+
+      bh = this.sd_1WVHi8yvECRsrUuh(bh);
+      //appendnew_next_sd_8AFpAhv2LmP8amr7
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_8AFpAhv2LmP8amr7');
+    }
+  }
+
+  sd_1WVHi8yvECRsrUuh(bh) {
+    try {
+      const page = this.page;
+      page.bookings.forEach(function (item) {
+        if (item.status === null) {
+          page.peddingUser.push(item);
+          console.log(page.peddingUser, 'Pending Landing');
+        } else if (item.status === false) {
+          page.rejectedUser.push(item);
+          console.log(page.rejectedUser, 'Rejected Landing');
+        } else {
+          page.approvedUser.push(item);
+          console.log(page.approvedUser, 'Approved Landing');
+        }
+      });
+      // page.peddingUser
+      // page.rejectedUser
+      // page.approvedUser
+      // console.log(page.peddingUser.length,'Pending  OutSide for each Landing');
+      // console.log(page.rejectedUser.length,'Rejected Outside for each Landing');
+      // console.log(page.approvedUser.length,'Approved outside for each Landing');
+      //appendnew_next_sd_1WVHi8yvECRsrUuh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1WVHi8yvECRsrUuh');
     }
   }
 

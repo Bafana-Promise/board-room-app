@@ -6,20 +6,21 @@
           <mat-card-content>
             <div fxLayout="column wrap" fxLayoutGap="8px" fxLayoutAlign="start stretch" [fxShow]="true">
               <div class="font-weight600">
-                Registered Users</div>
+                Can Book</div>
               <div fxLayout="row wrap" class="b-color" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon>filter_list</mat-icon>
-                <div>
-                  Filter</div>
               </div>
-              <div class="font-weight600 xxlarge-text">
-                {{page.users.length}}
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div *ngIf="page.admin" class="font-weight600 xxlarge-text">
+                  {{page.users.length}}
+                </div>
+                <div *ngIf="!page.admin" [ngClass]="(page.canBook.canBook === true) ? &apos;green-color&apos; : &apos;red-color&apos;" class="font-weight600 xxlarge-text">
+                  {{ (page.canBook.canBook === true) ? &apos;Yes&apos; : &apos;No&apos; }}
+                </div>
               </div>
               <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
-                <div class="b-bg border-radius50 dot-size">
-                </div>
                 <div class="b-color">
-                  Registered Count</div>
+                  Can Book Count</div>
               </div>
             </div>
           </mat-card-content>
@@ -35,15 +36,16 @@
                 Approved Bookings</div>
               <div fxLayout="row wrap" class="b-color" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon>filter_list</mat-icon>
-                <div>
-                  Filter</div>
               </div>
-              <div class="font-weight600 xxlarge-text">
-                {{page.approved.length}}
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div *ngIf="page.admin" class="font-weight600 xxlarge-text">
+                  {{page.approved.length}}
+                </div>
+                <div *ngIf="!page.admin" class="font-weight600 xxlarge-text">
+                  {{page.approvedUser.length}}
+                </div>
               </div>
               <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
-                <div class="dot-size border-radius50 green-bg">
-                </div>
                 <div class="green-color">
                   Approved Count</div>
               </div>
@@ -64,12 +66,15 @@
                 <div>
                   Filter</div>
               </div>
-              <div class="font-weight600 xxlarge-text">
-                {{page.pedding.length}}
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div *ngIf="page.admin" class="font-weight600 xxlarge-text">
+                  {{page.pedding.length}}
+                </div>
+                <div *ngIf="!page.admin" class="font-weight600 xxlarge-text">
+                  {{page.peddingUser.length}}
+                </div>
               </div>
               <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
-                <div class="dot-size border-radius50 orange-bg">
-                </div>
                 <div class="orange-color">
                   Pedding Count</div>
               </div>
@@ -87,15 +92,16 @@
                 Rejected Bookings</div>
               <div fxLayout="row wrap" class="b-color" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon>filter_list</mat-icon>
-                <div>
-                  Filter</div>
               </div>
-              <div class="font-weight600 xxlarge-text">
-                {{page.rejected.length}}
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div *ngIf="page.admin" class="font-weight600 xxlarge-text">
+                  {{page.rejected.length}}
+                </div>
+                <div *ngIf="!page.admin" class="font-weight600 xxlarge-text">
+                  {{page.rejectedUser.length}}
+                </div>
               </div>
               <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true">
-                <div class="dot-size border-radius50 red-bg">
-                </div>
                 <div class="red-color">
                   Rejected Count</div>
               </div>
@@ -115,8 +121,6 @@
                 This year shcedule</div>
               <div fxLayout="row wrap" class="b-color" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon>filter_list</mat-icon>
-                <div>
-                  Filter</div>
               </div>
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
                 <div fxFlex="100">
@@ -137,8 +141,6 @@
                 This year shcedule</div>
               <div fxLayout="row wrap" class="b-color" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon>filter_list</mat-icon>
-                <div>
-                  Filter</div>
               </div>
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
                 <div fxFlex="100">

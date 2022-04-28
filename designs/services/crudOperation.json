@@ -1252,7 +1252,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.local.result, \"CSD Bookings for dash\")",
+        "script": "// console.log(bh.local.result, \"CSD Bookings for dash\")",
         "functionName": "sd_f1mLlPu6F8btJERW",
         "category": "Function",
         "x": 720,

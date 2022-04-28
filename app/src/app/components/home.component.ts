@@ -163,36 +163,46 @@ export class homeComponent {
           icon: 'dashboard',
           name: 'Dashboard',
           show: true,
+          active: 'active-route',
         },
-        { url: '/home/admin', icon: 'groups', name: 'Users', show: page.admin },
+        {
+          url: '/home/admin',
+          icon: 'groups',
+          name: 'Users',
+          show: page.admin,
+          active: 'active-route',
+        },
         {
           url: '/home/employee',
           icon: 'event_note',
           name: 'Bookings',
           show: page.admin,
+          active: 'active-route',
         },
         {
           url: '/home/employee',
           icon: 'event_note',
           name: 'Bookings',
           show: !page.admin,
+          active: 'active-route',
         },
         {
           url: 'Logout',
           icon: 'power_settings_new',
           name: 'Logout',
           show: true,
+          active: 'active-route',
         },
       ];
-      console.log(page.loggedInUser, 'One Session');
+      // console.log(page.loggedInUser, "One Session")
       if (page.sideNavOpen == true) {
         page.sideNavWidth = '12';
-        console.log(page.sideNavWidth, page.sideNavOpen);
+        // console.log(page.sideNavWidth,page.sideNavOpen)
       } else {
         page.sideNavWidth = '21';
-        console.log(page.sideNavWidth, page.sideNavOpen);
+        // console.log(page.sideNavWidth,page.sideNavOpen)
       }
-      console.log(page.sideNavWidth, 'Click for side nav');
+      // console.log(page.sideNavWidth, "Click for side nav");
       //appendnew_next_sd_QhGoHZOb0IOg3UpN
       return bh;
     } catch (e) {
